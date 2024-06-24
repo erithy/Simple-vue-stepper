@@ -1,8 +1,6 @@
 <template>
   <div class="v-stepper">
     <component :is="rootComponent">
-      {{ value }}
-      {{ toIndex(value) }}a
       <v-step
         v-for="(step, $index) in stepsArr"
         :name="id"
@@ -55,7 +53,7 @@ export default {
     },
     linear: {
       type: Boolean,
-      default: true
+      default: false
     },
     persist: {
       type: Boolean,
@@ -97,7 +95,6 @@ export default {
     },
     index: {
       handler(index) {
-        console.log('index', index);
         this.$emit('input', this.toValue(index))
       },
       immediate: true
@@ -142,7 +139,6 @@ export default {
       const isNext = index === this.index + 1
       const isPrevious = index === this.index - 1
       const oldIndex = this.toIndex(this.value)
-      console.log({index, oldIndex});
       if (this.linear) {
         if (isNext || isPrevious) {
           this.setStep(index, 'active', true)
@@ -155,9 +151,6 @@ export default {
               this.setStep(step.index, 'disabled', true)
             }
           })
-          this.$emit('input', this.toValue(index))
-        } else {
-          this.setStep(oldIndex, 'visited', true)
           this.$emit('input', this.toValue(index))
         }
       } else {
@@ -200,7 +193,6 @@ export default {
       this.$emit('reset')
     },
     setStep(index, prop, value) {
-      console.log(this.stepsArr[index], 'setStep');
       this.$set(this.stepsArr[index], prop, value)
     },
     setStorage() {
