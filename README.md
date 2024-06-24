@@ -1,6 +1,6 @@
 # simple-vue-stepper
 The component source code took from: https://github.com/adi518/vue-stepper
-and modify and style to look a like Bootstrap
+and modify style to look alike Bootstrap
 
 ## Install
 ```
