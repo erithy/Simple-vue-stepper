@@ -1,6 +1,7 @@
 {
   "name": "simple-vue-stepper",
   "version": "1.0.0",
+  "description": "Simple Vue Stepper Component",
   "main": "./dist/simple-vue-stepper.umd.js",
   "files": [
     "dist/*",
@@ -9,6 +10,10 @@
     "*.json",
     "*.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erithy/simple-vue-stepper"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

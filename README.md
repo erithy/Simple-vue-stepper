@@ -1,8 +1,10 @@
 # simple-vue-stepper
+The component source code took from: https://github.com/adi518/vue-stepper
+and modify and style to look a like Bootstrap
 
 ## Install
 ```
-npm install vue-stepper-component --save
+npm i simple-vue-stepper
 ```
 
 ## Usage
@@ -134,7 +136,5 @@ npm run build-lib
 ### Lints and fixes files
 ```
 npm run lint
-```
+``
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
